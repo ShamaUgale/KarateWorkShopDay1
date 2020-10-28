@@ -1,4 +1,6 @@
 Feature: Testing basic signup
+Background:
+    * configure ssl = true
 
    Scenario: testing the POST call for new User registration
       Given url 'http://localhost:5000/api/auth/signup'

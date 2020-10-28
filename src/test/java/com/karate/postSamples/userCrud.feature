@@ -1,6 +1,8 @@
 Feature: User Creation
 Background:
     * url baseUrl
+    * configure ssl = true
+
 
     Scenario: Create a user with valid details
 
