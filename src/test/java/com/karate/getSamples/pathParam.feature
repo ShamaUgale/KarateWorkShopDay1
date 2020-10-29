@@ -1,10 +1,10 @@
 Feature: Get User deatils
 
-Background:
+  Background:
     * def base = 'https://reqres.in/api/users/'
     * configure ssl = true
 
-
+@dontRun
   Scenario: Path parameter example - Get a user with its id
 
     Given url base + 2

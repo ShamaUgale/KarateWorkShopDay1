@@ -4,7 +4,7 @@ Background:
     * url baseUrl
     * configure ssl = true
 
-@advance
+
   Scenario Outline: Get a user deatils for a valid user
 
     Given path '/api/users/<id>'
@@ -19,4 +19,3 @@ Background:
     |1|1|200|
     |2|2|200|
     |5|5|200|
-    |23451|null|404|

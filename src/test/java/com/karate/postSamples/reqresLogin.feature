@@ -7,6 +7,6 @@ Feature: Posting User Details
     And header Content-Type = 'application/json'
     And request '{"email": "eve.holt@reqres.in","password": "cityslicka"}'
     When method POST
-    Then status 200
     And print response
+    Then status 200
     Then match response == {"token":"#notnull"}

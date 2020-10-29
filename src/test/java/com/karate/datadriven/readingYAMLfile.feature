@@ -1,11 +1,10 @@
-Feature: Get user details - DataDriven tests
+Feature: Get user details - DataDriven tests using data from YAML files
 
 Background:
     * url baseUrl
     * configure ssl = true
 
-@advance
-  Scenario Outline: Get a user deatils for a valid user
+  Scenario Outline: Get a user deatils for a valid user from YAML
 
     Given path '/api/users/<id>'
     When method GET
@@ -15,8 +14,4 @@ Background:
     Then match response.data.id == <Expected_id>
 
     Examples:
-    |id|Expected_id|expected_status|
-    |1|1|200|
-    |2|2|200|
-    |5|5|200|
-    |23451|null|404|
+    |read('getUserDetails.yml')|
